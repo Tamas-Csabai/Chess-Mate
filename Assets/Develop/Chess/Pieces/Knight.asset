@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1efa50da37cc5ba41b18b8936b8f428f, type: 3}
+  m_Name: Knight
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 2188403332786309718, guid: 4faa53ba1ae828d4298cac852d55066e, type: 3}
+  HighlightColor: {r: 2, g: 1.841634, b: 0, a: 1}
