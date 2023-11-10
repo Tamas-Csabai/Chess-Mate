@@ -1,4 +1,4 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,7 +19,6 @@ namespace ChessMate.Games
         [SerializeField] private Transform fieldsParent;
         [SerializeField] private Transform piecesParent;
 
-        protected Game _game;
         protected Field[,] _fieldMatrix;
         protected List<Piece> _pieces = new List<Piece>();
 
@@ -28,13 +27,15 @@ namespace ChessMate.Games
 
         public Rect Size { get; private set; }
 
+        public Game Game { get; private set; }
+
         protected abstract FieldSO GetFieldSO(Coord coord);
 
         protected abstract void CreatePieces();
 
         public virtual void Initalize(Game game, int horizontalFieldCount, int verticalFieldCount)
         {
-            _game = game;
+            Game = game;
 
             float boardWidth = Mathf.Abs(bottomLeftCornerTransform.position.x - topRightCornerTransform.position.x);
             float boardHeight = Mathf.Abs(bottomLeftCornerTransform.position.z - topRightCornerTransform.position.z);

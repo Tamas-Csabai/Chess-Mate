@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1efa50da37cc5ba41b18b8936b8f428f, type: 3}
   m_Name: Bishop
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 2188403332786309718, guid: 4faa53ba1ae828d4298cac852d55066e, type: 3}
-  HighlightColor: {r: 2, g: 1.841634, b: 0, a: 1}
+  Prefab: {fileID: 1194059482127958743, guid: 42b7cc67b03c4fc448d348698b3585a5, type: 3}
+  SelectHighlightColor: {r: 2, g: 1.6114458, b: 0, a: 1}
+  TargetHighlightColor: {r: 2, g: 0, b: 0, a: 1}

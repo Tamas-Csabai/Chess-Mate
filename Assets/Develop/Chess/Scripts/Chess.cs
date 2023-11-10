@@ -14,6 +14,26 @@ namespace ChessMate.Games.ChessGame
 
         public PlayerSO BlackPlayerSO => blackPlayerSO;
 
+        protected override void PieceSelected(Piece piece)
+        {
+            base.PieceSelected(piece);
+
+            if(piece != null)
+                gameController.StartFieldSelection();
+        }
+
+        protected override void GameStarted()
+        {
+            gameController.StartPieceSelection();
+        }
+
+        protected override void FieldSelected(Field field)
+        {
+            base.FieldSelected(field);
+
+            gameController.StartPieceSelection();
+        }
+
         public static string GetRank(string squareID)
         {
             return squareID[1].ToString();

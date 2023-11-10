@@ -14,8 +14,8 @@ namespace ChessMate.Games
         [Tooltip("The field's color.")]
         public Color Color;
 
-        [Tooltip("The field's highlight color."), ColorUsage(true, true)]
-        public Color HighlightColor;
+        [Tooltip("The field's select highlight color."), ColorUsage(true, true)]
+        public Color SelectHighlightColor;
 
     }
 }

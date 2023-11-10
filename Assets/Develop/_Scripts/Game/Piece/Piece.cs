@@ -74,10 +74,18 @@ namespace ChessMate.Games
                 _availableFields.Add(Board.GetField(coord));
 
             foreach (Field field in _availableFields)
-                field.EnableHighlight();
+            {
+                if (field.CurrentPiece != null && field.CurrentPiece.PlayerSO != PlayerSO)
+                    field.CurrentPiece.EnableHighlight(field.CurrentPiece.PieceSO.TargetHighlightColor);
+
+                field.EnableHighlight(field.FieldSO.SelectHighlightColor);
+            }
 
             if (_availableFields.Count > 0)
+            {
+                EnableHighlight(PieceSO.SelectHighlightColor);
                 return true;
+            }
 
             return false;
         }
@@ -87,7 +95,12 @@ namespace ChessMate.Games
             foreach (Field field in _availableFields)
             {
                 field.ClearHighlight();
+
+                if(field.CurrentPiece != null)
+                    field.CurrentPiece.ClearHighlight();
             }
+
+            ClearHighlight();
         }
 
         public void SetColor(Color color)
@@ -98,11 +111,11 @@ namespace ChessMate.Games
             }
         }
 
-        public void EnableHighlight()
+        public void EnableHighlight(Color highlightColor)
         {
             for (int i = 0; i < _colorSetters.Length; i++)
             {
-                _colorSetters[i].SetColor("_EmissionColor", PieceSO.HighlightColor);
+                _colorSetters[i].SetColor("_EmissionColor", highlightColor);
             }
         }
 

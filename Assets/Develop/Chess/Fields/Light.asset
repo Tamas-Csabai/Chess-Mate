@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 796462789947780557, guid: fc83bbc845849644080b8858428fa351, type: 3}
   Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
-  HighlightColor: {r: 0, g: 0.4783802, b: 2, a: 1}
+  SelectHighlightColor: {r: 0, g: 0.7026911, b: 2, a: 1}

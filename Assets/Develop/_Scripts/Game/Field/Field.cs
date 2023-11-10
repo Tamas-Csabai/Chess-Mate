@@ -61,11 +61,11 @@ namespace ChessMate.Games
             }
         }
 
-        public void EnableHighlight()
+        public void EnableHighlight(Color highlightColor)
         {
             for (int i = 0; i < _colorSetters.Length; i++)
             {
-                _colorSetters[i].SetColor("_EmissionColor", FieldSO.HighlightColor);
+                _colorSetters[i].SetColor("_EmissionColor", highlightColor);
             }
         }
 

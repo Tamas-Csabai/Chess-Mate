@@ -12,8 +12,11 @@ namespace ChessMate.Games
         [Tooltip("The prefab of the chess piece to instantiate.")]
         public GameObject Prefab;
 
-        [Tooltip("The field's highlight color."), ColorUsage(true, true)]
-        public Color HighlightColor;
+        [Tooltip("The field's select highlight color."), ColorUsage(true, true)]
+        public Color SelectHighlightColor;
+
+        [Tooltip("The field's target highlight color."), ColorUsage(true, true)]
+        public Color TargetHighlightColor;
 
     }
 }
